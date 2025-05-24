@@ -42,3 +42,15 @@ Now it gets used in basic sort operations like the following:
 Collections.sort(attendeeList); // uses compareTo
 ```
 
+### 4.2. `Comparator`
+Is used when I want to **sort my list in different ways, without changing the class itself**:
+```java
+// Sort Attendee by price of guitar
+// Works with Lamda and between classes
+Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> attendee.getGuitar().getPrice())
+    .reversed();    // reverse order (leave out for natural order)
+```
+#### Input: Lamda
+`param -> body`
+
+### 4.3. `Comparator` implemented Class
