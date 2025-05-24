@@ -15,3 +15,30 @@ I decided to generate the test data with the website [generedata.com](https://ge
 
 
 When I run the project, I will parse the JSON and create objects of it with the Class [DataLoader](src\main\java\ch\bbw\util\DataLoader.java).
+
+## 4. Implement Functional Sorting
+
+### 4.1. `Comparable`
+Can **compare itself** to another object of the same type. Use it for **default sorting** like name or age. Implement it like this:
+```java
+// Implement the Comparable interface for comparing Attendee
+public class Attendee implements Comparable<Atstendee> {
+    private String name;
+    private Date birthday;
+    private int rank;
+    private Guitar guitar;
+    private Mentor mentor;
+
+    @Override
+    public int compareTo(Attendee other) {
+        // Default: sort by name (alphabetically)
+        return this.name.compareTo(other.name);
+    }
+}
+```
+
+Now it gets used in basic sort operations like the following:
+```java
+Collections.sort(attendeeList); // uses compareTo
+```
+
