@@ -1,0 +1,502 @@
+[
+	{
+		"name": "Lawrence Mathis",
+		"dateOfBirth": "May 29, 1979",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Clio Pugh",
+		"dateOfBirth": "Dec 5, 1967",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Chaim Emerson",
+		"dateOfBirth": "Aug 20, 1999",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Lara Mcclure",
+		"dateOfBirth": "Jul 3, 2005",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Kyla Santos",
+		"dateOfBirth": "Nov 13, 1971",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Lev Alford",
+		"dateOfBirth": "Aug 22, 1986",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Risa Blake",
+		"dateOfBirth": "Oct 6, 2003",
+		"genre": "METAL"
+	},
+	{
+		"name": "Karleigh Woodward",
+		"dateOfBirth": "Feb 15, 2007",
+		"genre": "METAL"
+	},
+	{
+		"name": "Michael Mcguire",
+		"dateOfBirth": "Jun 30, 1986",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Melvin Hobbs",
+		"dateOfBirth": "Jan 16, 2003",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Adena Haley",
+		"dateOfBirth": "Sep 15, 1975",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Kibo Baird",
+		"dateOfBirth": "Feb 3, 2006",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Tucker Blackwell",
+		"dateOfBirth": "Mar 25, 1977",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Abdul Everett",
+		"dateOfBirth": "Dec 15, 2003",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Leila Gutierrez",
+		"dateOfBirth": "Nov 12, 2005",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Cameron Rosario",
+		"dateOfBirth": "Feb 18, 1981",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Danielle Mathews",
+		"dateOfBirth": "May 11, 1971",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Rudyard Gardner",
+		"dateOfBirth": "Jun 14, 1973",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Slade Harrell",
+		"dateOfBirth": "Aug 5, 1982",
+		"genre": "POP"
+	},
+	{
+		"name": "Calista Gibbs",
+		"dateOfBirth": "Aug 29, 1982",
+		"genre": "POP"
+	},
+	{
+		"name": "Levi Stanton",
+		"dateOfBirth": "May 26, 1990",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Chloe Ramos",
+		"dateOfBirth": "May 15, 1992",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Drew Barron",
+		"dateOfBirth": "Oct 28, 1966",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Alden Wilder",
+		"dateOfBirth": "Apr 25, 1976",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Cassady Horne",
+		"dateOfBirth": "Aug 30, 1973",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Leroy Holmes",
+		"dateOfBirth": "Jan 7, 1997",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Norman Baxter",
+		"dateOfBirth": "May 4, 1996",
+		"genre": "METAL"
+	},
+	{
+		"name": "Gregory Cantrell",
+		"dateOfBirth": "Nov 4, 2000",
+		"genre": "METAL"
+	},
+	{
+		"name": "Ruth Pena",
+		"dateOfBirth": "Feb 24, 1974",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Frances Rojas",
+		"dateOfBirth": "Mar 26, 2006",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Kenneth Lee",
+		"dateOfBirth": "May 24, 1968",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Lee Buchanan",
+		"dateOfBirth": "Oct 3, 2002",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Karleigh Daniel",
+		"dateOfBirth": "Feb 10, 1979",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Mia Miles",
+		"dateOfBirth": "Jul 2, 1981",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Harding Duffy",
+		"dateOfBirth": "Nov 11, 1969",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Karly Bird",
+		"dateOfBirth": "Feb 14, 1993",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Quinn Velasquez",
+		"dateOfBirth": "May 23, 2003",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Nell Hess",
+		"dateOfBirth": "Apr 2, 1993",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Jemima Ramirez",
+		"dateOfBirth": "Jan 24, 1988",
+		"genre": "POP"
+	},
+	{
+		"name": "Oscar Albert",
+		"dateOfBirth": "Oct 19, 2006",
+		"genre": "POP"
+	},
+	{
+		"name": "Gemma Dyer",
+		"dateOfBirth": "Feb 2, 1974",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Benjamin Wallace",
+		"dateOfBirth": "Sep 1, 1989",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Karen Dennis",
+		"dateOfBirth": "Nov 26, 1982",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Damon Stein",
+		"dateOfBirth": "Jan 21, 2001",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Basil Watts",
+		"dateOfBirth": "Feb 9, 2004",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Daryl Avery",
+		"dateOfBirth": "Aug 2, 1972",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Jenna Pennington",
+		"dateOfBirth": "Jul 4, 2006",
+		"genre": "METAL"
+	},
+	{
+		"name": "Moana Riggs",
+		"dateOfBirth": "Dec 17, 1970",
+		"genre": "METAL"
+	},
+	{
+		"name": "Keely Juarez",
+		"dateOfBirth": "Jul 4, 1981",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Zenia Nash",
+		"dateOfBirth": "Jul 30, 1981",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Damian Hendricks",
+		"dateOfBirth": "Mar 23, 1984",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Aimee Hayden",
+		"dateOfBirth": "Mar 18, 1996",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Rina Barr",
+		"dateOfBirth": "Aug 30, 1971",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Abraham Rodgers",
+		"dateOfBirth": "Sep 26, 2005",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Lunea Summers",
+		"dateOfBirth": "May 22, 2003",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Channing Travis",
+		"dateOfBirth": "Feb 21, 1988",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Kareem Peterson",
+		"dateOfBirth": "May 28, 1993",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Tarik Ayers",
+		"dateOfBirth": "Mar 23, 2007",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Montana Mooney",
+		"dateOfBirth": "Jun 22, 1997",
+		"genre": "POP"
+	},
+	{
+		"name": "Piper Beard",
+		"dateOfBirth": "Oct 2, 1973",
+		"genre": "POP"
+	},
+	{
+		"name": "Fatima Wall",
+		"dateOfBirth": "Jun 23, 1978",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Tallulah Hammond",
+		"dateOfBirth": "Jul 23, 1992",
+		"genre": "ROCK"
+	},
+	{
+		"name": "September Morse",
+		"dateOfBirth": "Mar 20, 1981",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Oleg Kennedy",
+		"dateOfBirth": "Aug 3, 1982",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Reese Curry",
+		"dateOfBirth": "Dec 31, 1997",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Freya Rush",
+		"dateOfBirth": "Jan 26, 1984",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Vaughan Moreno",
+		"dateOfBirth": "Jun 27, 1980",
+		"genre": "METAL"
+	},
+	{
+		"name": "Hammett Ruiz",
+		"dateOfBirth": "Jun 22, 1976",
+		"genre": "METAL"
+	},
+	{
+		"name": "Mark Moss",
+		"dateOfBirth": "Nov 6, 1968",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Carlos Mercado",
+		"dateOfBirth": "Mar 25, 1971",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Tiger Rowe",
+		"dateOfBirth": "Jan 15, 1976",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Macy Montgomery",
+		"dateOfBirth": "Oct 2, 2003",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Lisandra Cash",
+		"dateOfBirth": "Jan 20, 1996",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Paki Larson",
+		"dateOfBirth": "Jun 26, 1982",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Hammett Mcdaniel",
+		"dateOfBirth": "Sep 9, 1967",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Fitzgerald Pierce",
+		"dateOfBirth": "Feb 15, 2005",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Veda Dickerson",
+		"dateOfBirth": "Apr 11, 2003",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Abbot Hall",
+		"dateOfBirth": "Oct 14, 2001",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Keefe Reed",
+		"dateOfBirth": "Aug 18, 2001",
+		"genre": "POP"
+	},
+	{
+		"name": "Ethan Mckee",
+		"dateOfBirth": "Jan 26, 1986",
+		"genre": "POP"
+	},
+	{
+		"name": "Walter Benton",
+		"dateOfBirth": "Mar 17, 2003",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Joelle Mcclain",
+		"dateOfBirth": "Oct 31, 1983",
+		"genre": "ROCK"
+	},
+	{
+		"name": "Caryn Thompson",
+		"dateOfBirth": "Oct 1, 1991",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Kane Whitney",
+		"dateOfBirth": "Feb 18, 1977",
+		"genre": "BLUES"
+	},
+	{
+		"name": "Armand Spencer",
+		"dateOfBirth": "Nov 19, 1971",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Kaitlin Dunlap",
+		"dateOfBirth": "Apr 28, 1972",
+		"genre": "JAZZ"
+	},
+	{
+		"name": "Angelica Massey",
+		"dateOfBirth": "Jan 19, 1978",
+		"genre": "METAL"
+	},
+	{
+		"name": "Acton Gould",
+		"dateOfBirth": "Feb 9, 1978",
+		"genre": "METAL"
+	},
+	{
+		"name": "Kenyon Brewer",
+		"dateOfBirth": "Mar 5, 2003",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Yardley Roth",
+		"dateOfBirth": "Aug 6, 1978",
+		"genre": "COUNTRY"
+	},
+	{
+		"name": "Fletcher Noel",
+		"dateOfBirth": "Jan 17, 1981",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Nicole Clarke",
+		"dateOfBirth": "Oct 7, 1984",
+		"genre": "FOLK"
+	},
+	{
+		"name": "Ann Chaney",
+		"dateOfBirth": "Feb 27, 1980",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Bell Forbes",
+		"dateOfBirth": "Apr 14, 1969",
+		"genre": "REGGAE"
+	},
+	{
+		"name": "Delilah Farmer",
+		"dateOfBirth": "Jan 31, 1988",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Gloria Joseph",
+		"dateOfBirth": "Dec 24, 1982",
+		"genre": "CLASSICAL"
+	},
+	{
+		"name": "Jael Coffey",
+		"dateOfBirth": "Nov 25, 1968",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Boris Gillespie",
+		"dateOfBirth": "Oct 26, 2004",
+		"genre": "FUNK"
+	},
+	{
+		"name": "Neil Crosby",
+		"dateOfBirth": "Jan 2, 1988",
+		"genre": "POP"
+	},
+	{
+		"name": "Paloma Witt",
+		"dateOfBirth": "Sep 21, 1977",
+		"genre": "POP"
+	}
+]
