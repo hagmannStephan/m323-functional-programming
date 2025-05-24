@@ -11,6 +11,6 @@ I created the model's in my Java Project in the [models folder](src/main/java/ch
 ## 3. Generate Data
 I decided to generate the test data with the website [generedata.com](https://generatedata.com/).
 
-I will parse the JSON and create objects of it with the Class [DataLoader](src\main\java\ch\bbw\DataLoader.java). Here is a screenshot of how I generated the mock data:
+I will parse the JSON and create objects of it with the Class [DataLoader](src\main\java\ch\bbw\util\DataLoader.java). Here is a screenshot of how I generated the mock data:
 
 <img src="https://github.com/user-attachments/assets/ac4208e2-31cc-48df-b4d7-bec9e6395426" alt="screenshot generatedata" width="800"/>
