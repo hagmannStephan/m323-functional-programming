@@ -14,17 +14,20 @@ public class DataLoader {
     public static class LoadedData {
         public final Guitar[] guitars;
         public final Mentor[] mentors;
+        public final Attendee[] attendees;
 
-        public LoadedData(Guitar[] guitars, Mentor[] mentors) {
+        public LoadedData(Guitar[] guitars, Mentor[] mentors, Attendee[] attendees) {
             this.guitars = guitars;
             this.mentors = mentors;
+            this.attendees = attendees;
         }
     }
 
-    public static LoadedData loadDataFromJson(String guitarJson, String mentorJson) throws IOException {
+    public static LoadedData loadDataFromJson(String guitarJson, String mentorJson, String attendeeJson) throws IOException {
         Guitar[] guitars = loadGuitarsFromJson(guitarJson);
         Mentor[] mentors = loadMentorsFromJson(mentorJson, guitars);
-        return new LoadedData(guitars, mentors);
+        Attendee[] attendees = loadAttendeesFromJson(attendeeJson, guitars, mentors);
+        return new LoadedData(guitars, mentors, attendees);
     }
 
     private static Guitar[] loadGuitarsFromJson(String json) throws IOException {
@@ -60,7 +63,7 @@ public class DataLoader {
             try {
                 mentor.setDateOfBirth(format.parse(m.dateOfBirth));
             } catch (ParseException e) {
-                mentor.setDateOfBirth(null); // or handle differently
+                mentor.setDateOfBirth(null);
             }
             mentor.setGenre(Genre.valueOf(m.genre.toUpperCase()));
             mentor.setGuitar(guitars[rand.nextInt(guitars.length)]);
@@ -70,7 +73,33 @@ public class DataLoader {
         return mentors;
     }
 
-    // DTO classes for JSON mapping
+    private static Attendee[] loadAttendeesFromJson(String json, Guitar[] guitars, Mentor[] mentors) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        List<AttendeeJson> tempList = mapper.readValue(json, new TypeReference<>() {});
+        Attendee[] attendees = new Attendee[tempList.size()];
+
+        Random rand = new Random();
+        SimpleDateFormat format = new SimpleDateFormat("MMM d, yyyy", Locale.ENGLISH);
+
+        for (int i = 0; i < tempList.size(); i++) {
+            AttendeeJson a = tempList.get(i);
+            Attendee attendee = new Attendee();
+            attendee.setName(a.name);
+            try {
+                attendee.setDateOfBirth(format.parse(a.dateOfBirth));
+            } catch (ParseException e) {
+                attendee.setDateOfBirth(null);
+            }
+            attendee.setRank(a.rank);
+            attendee.setGuitar(guitars[rand.nextInt(guitars.length)]);
+            attendee.setMentor(mentors[rand.nextInt(mentors.length)]);
+            attendees[i] = attendee;
+        }
+
+        return attendees;
+    }
+
+    // Internal DTOs
     private static class GuitarJson {
         public String brand;
         public String model;
@@ -82,5 +111,11 @@ public class DataLoader {
         public String name;
         public String dateOfBirth;
         public String genre;
+    }
+
+    private static class AttendeeJson {
+        public String name;
+        public String dateOfBirth;
+        public Integer rank;
     }
 }

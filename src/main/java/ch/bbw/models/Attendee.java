@@ -7,7 +7,7 @@ import java.util.Date;
 public class Attendee {
     public String name;
     public Date dateOfBirth;
-    public Integer age;
+    public Integer rank;
     public Guitar guitar;
     public Mentor mentor;
 }
