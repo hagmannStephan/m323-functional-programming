@@ -6,4 +6,4 @@ According to the requirements, I created this model:
 
 
 ## 2. Implement Models
-I created the model's in my Java Project in the [models folder](src\main\java\ch\bbw\models).
+I created the model's in my Java Project in the [models folder](src/main/java/ch/bbw/models).
