@@ -1,0 +1,602 @@
+[
+	{
+		"brand": "GIBSON",
+		"model": "L1X 9X5",
+		"price": 901,
+		"color": "#fcc0bf"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "D3T 7C4",
+		"price": 936,
+		"color": "#77efe3"
+	},
+	{
+		"brand": "FENDER",
+		"model": "N2M 7Q1",
+		"price": 540,
+		"color": "#f9d1ac"
+	},
+	{
+		"brand": "FENDER",
+		"model": "T9T 3L6",
+		"price": 622,
+		"color": "#95f97c"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "L3T 4Q4",
+		"price": 650,
+		"color": "#1d1789"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "G3K 8K7",
+		"price": 547,
+		"color": "#a7f9ae"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "N2P 5R1",
+		"price": 624,
+		"color": "#e96bf4"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "U3I 7P0",
+		"price": 614,
+		"color": "#efda1f"
+	},
+	{
+		"brand": "PRS",
+		"model": "K4T 5X1",
+		"price": 967,
+		"color": "#a1f4d9"
+	},
+	{
+		"brand": "PRS",
+		"model": "E2O 1A4",
+		"price": 537,
+		"color": "#b1ffa5"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "T1V 7Q6",
+		"price": 615,
+		"color": "#7a98e8"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "W4H 4W6",
+		"price": 677,
+		"color": "#023170"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "P6H 8K3",
+		"price": 971,
+		"color": "#6343a8"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "C9Q 3A7",
+		"price": 816,
+		"color": "#5fd865"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "Q1N 5O6",
+		"price": 986,
+		"color": "#3f9cc6"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "J7P 1N1",
+		"price": 893,
+		"color": "#4cf74f"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "I4C 8K7",
+		"price": 988,
+		"color": "#7af70c"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "F0U 5P2",
+		"price": 955,
+		"color": "#008c64"
+	},
+	{
+		"brand": "ESP",
+		"model": "P0C 7R2",
+		"price": 973,
+		"color": "#04aacc"
+	},
+	{
+		"brand": "ESP",
+		"model": "X4H 5N4",
+		"price": 800,
+		"color": "#351c77"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "F5B 4F0",
+		"price": 731,
+		"color": "#a2e8ef"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "O8V 8A0",
+		"price": 507,
+		"color": "#d11dbf"
+	},
+	{
+		"brand": "FENDER",
+		"model": "H3N 7X1",
+		"price": 992,
+		"color": "#a0bc2f"
+	},
+	{
+		"brand": "FENDER",
+		"model": "F4T 6J5",
+		"price": 780,
+		"color": "#af0e49"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "O5W 6X6",
+		"price": 526,
+		"color": "#00a040"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "U6M 2H1",
+		"price": 979,
+		"color": "#d6e819"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "U5V 3O8",
+		"price": 625,
+		"color": "#fc99ce"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "B5W 2C1",
+		"price": 645,
+		"color": "#6f34f9"
+	},
+	{
+		"brand": "PRS",
+		"model": "M1M 5F4",
+		"price": 901,
+		"color": "#a5ceef"
+	},
+	{
+		"brand": "PRS",
+		"model": "F7I 2L6",
+		"price": 660,
+		"color": "#f78ac4"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "Q6M 6A3",
+		"price": 614,
+		"color": "#3aed34"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "Z5L 4U3",
+		"price": 888,
+		"color": "#6974ef"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "C1A 3E7",
+		"price": 905,
+		"color": "#76e878"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "L3Y 3M7",
+		"price": 555,
+		"color": "#90a4ed"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "J7G 9K5",
+		"price": 781,
+		"color": "#dda25a"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "N8D 8T1",
+		"price": 969,
+		"color": "#fc55a9"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "T9Z 3W6",
+		"price": 717,
+		"color": "#96d0f2"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "R1L 4D2",
+		"price": 907,
+		"color": "#6de073"
+	},
+	{
+		"brand": "ESP",
+		"model": "S3H 2T7",
+		"price": 604,
+		"color": "#8dbff4"
+	},
+	{
+		"brand": "ESP",
+		"model": "H3U 7Q0",
+		"price": 571,
+		"color": "#93f2b0"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "L0N 3M1",
+		"price": 600,
+		"color": "#44228e"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "V6Z 1V7",
+		"price": 762,
+		"color": "#a4f9c6"
+	},
+	{
+		"brand": "FENDER",
+		"model": "E4L 5D5",
+		"price": 583,
+		"color": "#80f2cc"
+	},
+	{
+		"brand": "FENDER",
+		"model": "J1E 5F2",
+		"price": 943,
+		"color": "#ecef8d"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "P6L 4D1",
+		"price": 536,
+		"color": "#c40163"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "B6Q 2I6",
+		"price": 805,
+		"color": "#f7d704"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "H5W 2L5",
+		"price": 794,
+		"color": "#aeef97"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "M8M 0E8",
+		"price": 521,
+		"color": "#c4f49a"
+	},
+	{
+		"brand": "PRS",
+		"model": "V4V 4J9",
+		"price": 741,
+		"color": "#e884a8"
+	},
+	{
+		"brand": "PRS",
+		"model": "Z1Q 1S8",
+		"price": 513,
+		"color": "#c613a9"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "L6W 5F7",
+		"price": 977,
+		"color": "#4c9316"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "N9T 3N4",
+		"price": 538,
+		"color": "#f7ff14"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "R4A 5H2",
+		"price": 585,
+		"color": "#25ea6d"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "W7C 0F1",
+		"price": 889,
+		"color": "#5026b5"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "D4X 1G1",
+		"price": 858,
+		"color": "#70e09b"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "T5X 6M7",
+		"price": 758,
+		"color": "#8268c4"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "U5S 3G1",
+		"price": 689,
+		"color": "#fc35b9"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "O5J 3H3",
+		"price": 927,
+		"color": "#5ef9c8"
+	},
+	{
+		"brand": "ESP",
+		"model": "V4O 0C6",
+		"price": 994,
+		"color": "#9ad34a"
+	},
+	{
+		"brand": "ESP",
+		"model": "T3F 6Q2",
+		"price": 840,
+		"color": "#0079a5"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "B9N 4N4",
+		"price": 588,
+		"color": "#c270f4"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "M2Q 9W8",
+		"price": 754,
+		"color": "#d9f776"
+	},
+	{
+		"brand": "FENDER",
+		"model": "U8H 5O1",
+		"price": 794,
+		"color": "#8d84f4"
+	},
+	{
+		"brand": "FENDER",
+		"model": "H5K 5S4",
+		"price": 697,
+		"color": "#65d157"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "F7M 2Q0",
+		"price": 649,
+		"color": "#a15df4"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "M8A 6T2",
+		"price": 732,
+		"color": "#d1933c"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "F4W 3H7",
+		"price": 649,
+		"color": "#7447ef"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "M8V 6C1",
+		"price": 793,
+		"color": "#9be1ef"
+	},
+	{
+		"brand": "PRS",
+		"model": "J0H 4S0",
+		"price": 689,
+		"color": "#ea27a9"
+	},
+	{
+		"brand": "PRS",
+		"model": "W8E 1U5",
+		"price": 694,
+		"color": "#162bb7"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "S3D 8O8",
+		"price": 722,
+		"color": "#82edc4"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "R1E 7X5",
+		"price": 614,
+		"color": "#b2ffe0"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "F8O 6X1",
+		"price": 611,
+		"color": "#ef6d1c"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "Y0T 6I0",
+		"price": 805,
+		"color": "#576ebf"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "Y3X 5N7",
+		"price": 891,
+		"color": "#ffdfa8"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "C1B 2V9",
+		"price": 644,
+		"color": "#e27acf"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "W4Y 5N4",
+		"price": 654,
+		"color": "#db4399"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "C3L 1D9",
+		"price": 875,
+		"color": "#cfbfff"
+	},
+	{
+		"brand": "ESP",
+		"model": "E3E 5U7",
+		"price": 730,
+		"color": "#ffc9fe"
+	},
+	{
+		"brand": "ESP",
+		"model": "C1Q 3Y3",
+		"price": 602,
+		"color": "#db39a5"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "G6E 9U1",
+		"price": 706,
+		"color": "#3e4dad"
+	},
+	{
+		"brand": "GIBSON",
+		"model": "X6B 8E9",
+		"price": 902,
+		"color": "#d62a8e"
+	},
+	{
+		"brand": "FENDER",
+		"model": "A3G 2Y1",
+		"price": 702,
+		"color": "#355cf4"
+	},
+	{
+		"brand": "FENDER",
+		"model": "L4K 1F1",
+		"price": 850,
+		"color": "#ea9b7c"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "U3R 4V8",
+		"price": 646,
+		"color": "#70bbe0"
+	},
+	{
+		"brand": "YAMAHA",
+		"model": "P7S 4Q1",
+		"price": 612,
+		"color": "#4549d1"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "Y8I 3C8",
+		"price": 844,
+		"color": "#67c6c5"
+	},
+	{
+		"brand": "IBANEZ",
+		"model": "D6V 1W7",
+		"price": 957,
+		"color": "#ffb5e6"
+	},
+	{
+		"brand": "PRS",
+		"model": "F4Q 1S1",
+		"price": 654,
+		"color": "#9ce06b"
+	},
+	{
+		"brand": "PRS",
+		"model": "B2X 1X9",
+		"price": 573,
+		"color": "#2fa2ef"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "Q5U 1Z6",
+		"price": 786,
+		"color": "#ffdc9b"
+	},
+	{
+		"brand": "MARTIN",
+		"model": "N7L 0H0",
+		"price": 500,
+		"color": "#005cb2"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "R3I 4D5",
+		"price": 659,
+		"color": "#188c04"
+	},
+	{
+		"brand": "EPIPHONE",
+		"model": "K6L 1L6",
+		"price": 603,
+		"color": "#9ff490"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "J1N 7K5",
+		"price": 654,
+		"color": "#e55b77"
+	},
+	{
+		"brand": "GRETSCH",
+		"model": "W8Q 5Z5",
+		"price": 762,
+		"color": "#e2041a"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "Q3V 2D1",
+		"price": 612,
+		"color": "#fce27b"
+	},
+	{
+		"brand": "ROLAND",
+		"model": "L7A 5Q3",
+		"price": 587,
+		"color": "#dbd815"
+	},
+	{
+		"brand": "ESP",
+		"model": "J7D 7K6",
+		"price": 980,
+		"color": "#a0c8e8"
+	},
+	{
+		"brand": "ESP",
+		"model": "D8Y 3F2",
+		"price": 551,
+		"color": "#d14d65"
+	}
+]

@@ -7,3 +7,8 @@ According to the requirements, I created this model:
 
 ## 2. Implement Models
 I created the model's in my Java Project in the [models folder](src/main/java/ch/bbw/models).
+
+## 3. Generate Data
+I decided to generate the test data with the website [generedata.com](https://generatedata.com/).
+
+I will parse the JSON and create objects of it with the Class [DataLoader](src\main\java\ch\bbw\DataLoader.java).
