@@ -47,10 +47,21 @@ Is used when I want to **sort my list in different ways, without changing the cl
 ```java
 // Sort Attendee by price of guitar
 // Works with Lamda and between classes
+// param -> body
 Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> attendee.getGuitar().getPrice())
     .reversed();    // reverse order (leave out for natural order)
 ```
-#### Input: Lamda
-`param -> body`
 
-### 4.3. `Comparator` implemented Class
+#### 4.2.1 `Comparator` derived Class
+Uses a individual class that is derived from the Comparator:
+```java
+public class MentorByDateOfBirth implements Comparator<Mentor> {
+    @Override
+    public int compare(Mentor m1, Mentor m2) {
+        if (m1 == null || m2 == null) {
+            return 0; // Handle null cases as needed
+        }
+        return m1.getDateOfBirth().compareTo(m2.getDateOfBirth());
+    }
+}
+```
