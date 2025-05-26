@@ -18,7 +18,7 @@ When I run the project, I will parse the JSON and create objects of it with the 
 
 ## 4. Implement Functional Sorting
 
-### 4.1. `Comparable`
+### 4.1 `Comparable`
 Can **compare itself** to another object of the same type. Use it for **default sorting** like name or age. Implement it like this:
 ```java
 // Implement the Comparable interface for comparing Attendee
@@ -42,29 +42,86 @@ Now it gets used in basic sort operations like the following:
 Collections.sort(attendeeList); // uses compareTo
 ```
 
-### 4.2. `Comparator`
-Is used when I want to **sort my list in different ways, without changing the class itself**:
-```java
-// Sort Attendee by price of guitar
-// Works with Lamda and between classes
-// param -> body
-Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> attendee.getGuitar().getPrice())
-    .reversed();    // reverse order (leave out for natural order)
-```
+### 4.2 `Comparator`
 
 #### 4.2.1 `Comparator` derived Class
 Uses a individual class that is derived from the Comparator:
 ```java
-public class MentorByDateOfBirth implements Comparator<Mentor> {
+public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
 
     @Override
-    public int compare(Mentor m1, Mentor m2) {
-        if (m1 == null || m2 == null) {
+    public int compare(Attendee a1, Attendee a2) {
+        if (a1 == null || a2 == null) {
             return 0; // Handle null cases as needed
         }
-        return m1.getDateOfBirth().compareTo(m2.getDateOfBirth());
+        return a1.getMentor().getDateOfBirth().compareTo(a2.getMentor().getDateOfBirth());
     }
 }
 ```
+You can call it like this in the code:
+```java
+Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
+```
 
-#### 4.2.2 `Comparator` as Anonymous Class
+#### 4.2.2 `Comparator` as anonymous Class
+Write the Comparator class directly in the sort method:
+```java
+Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
+    @Override
+    public int compare(Attendee a1, Attendee a2) {
+    if (a1 == null || a2 == null) {
+        return 0; // Handle null cases as needed
+    }
+    return a1.getDateOfBirth().compareTo(a2.getDateOfBirth());
+    }
+};
+// Does the same as Collections.sort(attendees, byDateOfBirth);, however would recommend usage as in example above
+// Also possible to write the Comparator directly as sort param
+attendees.sort(byDateOfBirth);
+```
+
+### 4.2.3 `Comparator` as lambda expression
+Now the same with lamda expression:
+```java
+attendees.sort((a1, a2) -> {
+    return a1.getRank().compareTo(a2.getRank());
+});
+```
+
+### 4.2.4 `Comparator Chaining`
+With Comparator Chaining you can define what should be compared if the first comparison returns an equal value:
+```java
+attendees.sort(
+    Comparator.comparing((Attendee a) -> a.getGuitar().getPrice())
+            // Only possible if getName is directly a method from Attendee
+            .thenComparing(Attendee::getName)
+);
+```
+
+## 4.3 `naturalOrder` and `reverseOrder`
+Code by writing a new comparator: 
+```java
+List<String> names = List.of("Charlie", "Anna", "Bob");
+names.stream()
+     .sorted(Comparator.reversedOrder())
+     .forEach(System.out::println);
+```
+
+or by just calling the reversed method:
+```java
+attendees.sort(
+    Comparator.comparing(Attendee::getRank).reversed()
+);
+```
+
+Output `reverseOrder`:
+```sh
+Charlie
+Bob
+Anna
+```
+
+It is also possible to turn the list aroudn by chaning the manual reverse logic:
+```java
+attendees.sort((a1, a2) -> a2.getRank().compareTo(a1.getRank()));
+```
