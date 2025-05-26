@@ -9,7 +9,6 @@ import java.util.Comparator;
 import java.util.List;
 
 import ch.bbw.models.Attendee;
-import ch.bbw.models.Mentor;
 import ch.bbw.util.DataLoader;
 
 public class Main {
@@ -35,7 +34,10 @@ public class Main {
         // comparator_4_2_3(attendeeList);
 
         // 4.2.4: Comparator Chaining
-        comparator_4_2_4(attendeeList);
+        // comparator_4_2_4(attendeeList);
+
+        // 4.3: Reversed Order
+        comparator_4_3(attendeeList);
     }
 
     public static void comparable_4_1(List<Attendee> attendees) {
@@ -111,6 +113,20 @@ public class Main {
         // Print the results
         for (Attendee attendee : attendees) {
             System.out.println(attendee.getName() + " - Price Guitar: " + attendee.getGuitar().getPrice() + " CHF");
+        }
+    }
+
+    public static void comparator_4_3(List<Attendee> attendees){
+        // Task 4.3: Comparator that reverses a list sorted by guitar price 
+        System.out.println("------------------------------------------------------");
+        System.out.println("4.2.4 Sorted Attendee List, by guitar price:");
+        System.out.println("------------------------------------------------------");
+        attendees.sort(
+            Comparator.comparing(Attendee::getRank).reversed()
+        );
+        // Print the resutls
+        for(Attendee attendee : attendees) {
+            System.out.println(attendee.getName() + " - Rank: " + attendee.getRank());
         }
     }
 }

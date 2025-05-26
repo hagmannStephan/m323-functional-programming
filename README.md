@@ -18,7 +18,7 @@ When I run the project, I will parse the JSON and create objects of it with the 
 
 ## 4. Implement Functional Sorting
 
-### 4.1. `Comparable`
+### 4.1 `Comparable`
 Can **compare itself** to another object of the same type. Use it for **default sorting** like name or age. Implement it like this:
 ```java
 // Implement the Comparable interface for comparing Attendee
@@ -42,7 +42,7 @@ Now it gets used in basic sort operations like the following:
 Collections.sort(attendeeList); // uses compareTo
 ```
 
-### 4.2. `Comparator`
+### 4.2 `Comparator`
 
 #### 4.2.1 `Comparator` derived Class
 Uses a individual class that is derived from the Comparator:
@@ -96,4 +96,32 @@ attendees.sort(
             // Only possible if getName is directly a method from Attendee
             .thenComparing(Attendee::getName)
 );
+```
+
+## 4.3 `naturalOrder` and `reverseOrder`
+Code by writing a new comparator: 
+```java
+List<String> names = List.of("Charlie", "Anna", "Bob");
+names.stream()
+     .sorted(Comparator.reversedOrder())
+     .forEach(System.out::println);
+```
+
+or by just calling the reversed method:
+```java
+attendees.sort(
+    Comparator.comparing(Attendee::getRank).reversed()
+);
+```
+
+Output `reverseOrder`:
+```sh
+Charlie
+Bob
+Anna
+```
+
+It is also possible to turn the list aroudn by chaning the manual reverse logic:
+```java
+attendees.sort((a1, a2) -> a2.getRank().compareTo(a1.getRank()));
 ```
