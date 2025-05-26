@@ -21,7 +21,6 @@ public class Main {
         DataLoader.LoadedData data = DataLoader.loadDataFromJson(guitarJson, mentorJson, attendeeJson);
 
         List<Attendee> attendeeList = Arrays.asList(data.attendees);
-        List<Mentor> mentorList = Arrays.asList(data.mentors);
 
         // Task 4.1: Comparable
         // comparable_4_1(attendeeList);
@@ -30,7 +29,7 @@ public class Main {
         // comparator_4_2(attendeeList);
 
         // Task 4.2.1: Comparator with MentorByDateOfBirth
-        comparator_4_2_1(mentorList);
+        comparator_4_2_1(attendeeList);
     }
 
     public static void comparable_4_1(List<Attendee> attendees) {
@@ -59,14 +58,14 @@ public class Main {
         System.out.print("\n \n");
     }
 
-    public static void comparator_4_2_1(List<Mentor> mentors) {
+    public static void comparator_4_2_1(List<Attendee> attendees) {
         // Task 4.2.1: Comparator with MentorByDateOfBirth
         System.out.println("------------------------------------------------------");
-        System.out.println("4.2.1 Sorted Mentor List, by date of birth:");
+        System.out.println("4.2.1 Sorted Attendee List, by Mentor date of birth:");
         System.out.println("------------------------------------------------------");
-        Collections.sort(mentors, new ch.bbw.util.MentorByDateOfBirth());
-        for (Mentor mentor : mentors) {
-            System.out.println(mentor.getName() + " - Year of Birth: " + mentor.getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
+        Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
+        for (Attendee attendee : attendees) {
+            System.out.println(attendee.getName() + " - Year of Birth Mentor: " + attendee.getMentor().getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
         }
         System.out.print("\n \n");
     }

@@ -56,6 +56,7 @@ Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> atten
 Uses a individual class that is derived from the Comparator:
 ```java
 public class MentorByDateOfBirth implements Comparator<Mentor> {
+
     @Override
     public int compare(Mentor m1, Mentor m2) {
         if (m1 == null || m2 == null) {
@@ -65,3 +66,5 @@ public class MentorByDateOfBirth implements Comparator<Mentor> {
     }
 }
 ```
+
+#### 4.2.2 `Comparator` as Anonymous Class
