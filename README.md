@@ -55,16 +55,31 @@ Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> atten
 #### 4.2.1 `Comparator` derived Class
 Uses a individual class that is derived from the Comparator:
 ```java
-public class MentorByDateOfBirth implements Comparator<Mentor> {
+public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
 
     @Override
-    public int compare(Mentor m1, Mentor m2) {
-        if (m1 == null || m2 == null) {
+    public int compare(Attendee a1, Attendee a2) {
+        if (a1 == null || a2 == null) {
             return 0; // Handle null cases as needed
         }
-        return m1.getDateOfBirth().compareTo(m2.getDateOfBirth());
+        return a1.getMentor().getDateOfBirth().compareTo(a2.getMentor().getDateOfBirth());
     }
 }
 ```
 
 #### 4.2.2 `Comparator` as Anonymous Class
+Write the Comparator class directly in the sort method:
+```java
+Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
+    @Override
+    public int compare(Attendee a1, Attendee a2) {
+    if (a1 == null || a2 == null) {
+        return 0; // Handle null cases as needed
+    }
+    return a1.getDateOfBirth().compareTo(a2.getDateOfBirth());
+    }
+};
+// Does the same as Collections.sort(attendees, byDateOfBirth);
+// Also possible to write the Comparator directly as sort param
+attendees.sort(byDateOfBirth);
+```

@@ -29,7 +29,10 @@ public class Main {
         // comparator_4_2(attendeeList);
 
         // Task 4.2.1: Comparator with MentorByDateOfBirth
-        comparator_4_2_1(attendeeList);
+        // comparator_4_2_1(attendeeList);
+
+        // Task 4.2.2: Comparator used with anonymous class
+        comparator_4_2_2(attendeeList);
     }
 
     public static void comparable_4_1(List<Attendee> attendees) {
@@ -68,5 +71,25 @@ public class Main {
             System.out.println(attendee.getName() + " - Year of Birth Mentor: " + attendee.getMentor().getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
         }
         System.out.print("\n \n");
+    }
+
+    public static void comparator_4_2_2(List<Attendee> attendees) {
+        // Task 4.2.2: Comparator used with anonymous class
+        System.out.println("------------------------------------------------------");
+        System.out.println("4.2.2 Sorted Attendee List, by date of birth:");
+        System.out.println("------------------------------------------------------");
+        Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
+            @Override
+            public int compare(Attendee a1, Attendee a2) {
+            if (a1 == null || a2 == null) {
+                return 0; // Handle null cases as needed
+            }
+            return a1.getDateOfBirth().compareTo(a2.getDateOfBirth());
+            }
+        };
+        attendees.sort(byDateOfBirth);
+        for (Attendee attendee : attendees) {
+            System.out.println(attendee.getName() + " - Date of Birth: " + attendee.getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
+        }
     }
 }
