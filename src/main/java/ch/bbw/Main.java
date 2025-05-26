@@ -32,7 +32,10 @@ public class Main {
         // comparator_4_2_2(attendeeList);
 
         // Task 4.2.3: Comparator used with lamda expression
-        comparator_4_2_3(attendeeList);
+        // comparator_4_2_3(attendeeList);
+
+        // 4.2.4: Comparator Chaining
+        comparator_4_2_4(attendeeList);
     }
 
     public static void comparable_4_1(List<Attendee> attendees) {
@@ -92,6 +95,22 @@ public class Main {
         // Print the results
         for(Attendee attendee : attendees) {
             System.out.println(attendee.getName() + "- Rank: " + attendee.getRank());
+        }
+    }
+
+    public static void comparator_4_2_4(List<Attendee> attendees) {
+        // Task 4.2.4: Comparator with comparator chain
+        System.out.println("------------------------------------------------------");
+        System.out.println("4.2.4 Sorted Attendee List, by guitar price:");
+        System.out.println("------------------------------------------------------");
+        attendees.sort(
+            Comparator.comparing((Attendee a) -> a.getGuitar().getPrice())
+                    // Only possible if getName is directly a method from Attendee
+                    .thenComparing(Attendee::getName)
+        );
+        // Print the results
+        for (Attendee attendee : attendees) {
+            System.out.println(attendee.getName() + " - Price Guitar: " + attendee.getGuitar().getPrice() + " CHF");
         }
     }
 }

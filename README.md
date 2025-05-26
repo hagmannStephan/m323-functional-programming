@@ -87,3 +87,13 @@ attendees.sort((a1, a2) -> {
     return a1.getRank().compareTo(a2.getRank());
 });
 ```
+
+### 4.2.4 `Comparator Chaining`
+With Comparator Chaining you can define what should be compared if the first comparison returns an equal value:
+```java
+attendees.sort(
+    Comparator.comparing((Attendee a) -> a.getGuitar().getPrice())
+            // Only possible if getName is directly a method from Attendee
+            .thenComparing(Attendee::getName)
+);
+```
