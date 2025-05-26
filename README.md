@@ -81,3 +81,9 @@ attendees.sort(byDateOfBirth);
 ```
 
 ### 4.2.3 `Comparator` as lambda expression
+Now the same with lamda expression:
+```java
+attendees.sort((a1, a2) -> {
+    return a1.getRank().compareTo(a2.getRank());
+});
+```
