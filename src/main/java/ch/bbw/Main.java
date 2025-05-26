@@ -25,38 +25,23 @@ public class Main {
         // Task 4.1: Comparable
         // comparable_4_1(attendeeList);
 
-        // Task 4.2: Comparator
-        // comparator_4_2(attendeeList);
-
         // Task 4.2.1: Comparator with MentorByDateOfBirth
         // comparator_4_2_1(attendeeList);
 
         // Task 4.2.2: Comparator used with anonymous class
-        comparator_4_2_2(attendeeList);
+        // comparator_4_2_2(attendeeList);
+
+        // Task 4.2.3: Comparator used with lamda expression
+        comparator_4_2_3(attendeeList);
     }
 
     public static void comparable_4_1(List<Attendee> attendees) {
-        Collections.sort(attendees);
         System.out.println("------------------------------------------------------");
         System.out.println("4.1 Sorted Attendee List, alphabetically by name:");
         System.out.println("------------------------------------------------------");
+        Collections.sort(attendees);
         for (Attendee attendee : attendees) {
             System.out.println(attendee.getName());
-        }
-        System.out.print("\n \n");
-    }
-
-    public static void comparator_4_2(List<Attendee> attendees) {
-        // Task 4.2: Comparator
-        System.out.println("------------------------------------------------------");
-        System.out.println("4.2 Sorted Attendee List, by price of guitar (desc):");
-        System.out.println("Works with Lambda and inbetween Classes");
-        System.out.println("------------------------------------------------------");
-        Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> attendee.getGuitar().getPrice())
-            .reversed();    // Make it desc (reverse order)
-        Collections.sort(attendees, byPrice);
-        for (Attendee attendee : attendees) {
-            System.out.println(attendee.getName() + " - Price: " + attendee.getGuitar().getPrice() + " CHF");
         }
         System.out.print("\n \n");
     }
@@ -67,6 +52,7 @@ public class Main {
         System.out.println("4.2.1 Sorted Attendee List, by Mentor date of birth:");
         System.out.println("------------------------------------------------------");
         Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
+        // Print the results
         for (Attendee attendee : attendees) {
             System.out.println(attendee.getName() + " - Year of Birth Mentor: " + attendee.getMentor().getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
         }
@@ -87,9 +73,25 @@ public class Main {
             return a1.getDateOfBirth().compareTo(a2.getDateOfBirth());
             }
         };
+        // Print the results
         attendees.sort(byDateOfBirth);
         for (Attendee attendee : attendees) {
             System.out.println(attendee.getName() + " - Date of Birth: " + attendee.getDateOfBirth().toInstant().atZone(java.time.ZoneId.systemDefault()).getYear());
+        }
+        System.out.print("\n \n");
+    }
+
+    public static void comparator_4_2_3(List<Attendee> attendees) {
+        // Task 4.2.3: Comparator with lambda expression
+        System.out.println("------------------------------------------------------");
+        System.out.println("4.2.3 Sorted Attendee List, by rank:");
+        System.out.println("------------------------------------------------------");
+        attendees.sort((a1, a2) -> {
+            return a1.getRank().compareTo(a2.getRank());
+        });
+        // Print the results
+        for(Attendee attendee : attendees) {
+            System.out.println(attendee.getName() + "- Rank: " + attendee.getRank());
         }
     }
 }

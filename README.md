@@ -43,14 +43,6 @@ Collections.sort(attendeeList); // uses compareTo
 ```
 
 ### 4.2. `Comparator`
-Is used when I want to **sort my list in different ways, without changing the class itself**:
-```java
-// Sort Attendee by price of guitar
-// Works with Lamda and between classes
-// param -> body
-Comparator<Attendee> byPrice = Comparator.comparing((Attendee attendee) -> attendee.getGuitar().getPrice())
-    .reversed();    // reverse order (leave out for natural order)
-```
 
 #### 4.2.1 `Comparator` derived Class
 Uses a individual class that is derived from the Comparator:
@@ -66,8 +58,12 @@ public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
     }
 }
 ```
+You can call it like this in the code:
+```java
+Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
+```
 
-#### 4.2.2 `Comparator` as Anonymous Class
+#### 4.2.2 `Comparator` as anonymous Class
 Write the Comparator class directly in the sort method:
 ```java
 Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
@@ -79,7 +75,9 @@ Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
     return a1.getDateOfBirth().compareTo(a2.getDateOfBirth());
     }
 };
-// Does the same as Collections.sort(attendees, byDateOfBirth);
+// Does the same as Collections.sort(attendees, byDateOfBirth);, however would recommend usage as in example above
 // Also possible to write the Comparator directly as sort param
 attendees.sort(byDateOfBirth);
 ```
+
+### 4.2.3 `Comparator` as lambda expression
