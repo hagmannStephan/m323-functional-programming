@@ -18,6 +18,8 @@ When I run the project, I will parse the JSON and create objects of it with the 
 
 ## 4. Implement Functional Sorting
 
+**For a better structured version of the part below, checkout my CheatSheet!**
+
 ### 4.1 `Comparable`
 Can **compare itself** to another object of the same type. Use it for **default sorting** like name or age. Implement it like this:
 ```java
@@ -45,7 +47,7 @@ Collections.sort(attendeeList); // uses compareTo
 ### 4.2 `Comparator`
 
 #### 4.2.1 `Comparator` derived Class
-Uses a individual class that is derived from the Comparator:
+Allow to define custom comparison logic <span style="text-decoration: underline; font-weight: bold">outside the class</span> for which instances we want to sort:
 ```java
 public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
 
@@ -98,30 +100,21 @@ attendees.sort(
 );
 ```
 
-## 4.3 `naturalOrder` and `reverseOrder`
-Code by writing a new comparator: 
+# 4.3 Natural / Reverse Order
+**Natural Order**: Ascending (e.g. oldest date first, youngest age first, ...)
+**Reverse Order**: Descending (e.G. names with z first, true first, ...)
+## Option 1: Change Comparison
 ```java
-List<String> names = List.of("Charlie", "Anna", "Bob");
-names.stream()
-     .sorted(Comparator.reversedOrder())
-     .forEach(System.out::println);
+    return a1.getRank().compareTo(a2.getRank());
+    // becomes (for last rank, first)
+    return a2.getRank().compareTo(a1.getRank());
 ```
-
-or by just calling the reversed method:
+## Option 2: Use `reversed()`
+Needs to be applied directly to the comparison, can't just be appended to, e.g. a lambda expression.
 ```java
-attendees.sort(
-    Comparator.comparing(Attendee::getRank).reversed()
-);
-```
-
-Output `reverseOrder`:
-```sh
-Charlie
-Bob
-Anna
-```
-
-It is also possible to turn the list aroudn by chaning the manual reverse logic:
-```java
-attendees.sort((a1, a2) -> a2.getRank().compareTo(a1.getRank()));
+	// attendees.sort((a1, a2) -> {
+		// return a1.getRank().compareTo(a2.getRank());
+	// });
+	// becomes
+	attendees.sort(Comparator.comparing(Attendee::getRank).reversed());
 ```
