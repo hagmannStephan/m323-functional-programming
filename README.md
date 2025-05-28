@@ -85,7 +85,7 @@ attendees.sort(
 Used to define the natural order of objects for objects of a class. Has to be implemented in this class.
 ```java
 // Implement the Comparable interface for comparing Attendee
-public class Attendee implements Comparable<Atstendee> {
+public class Attendee implements Comparable<Attendee> {
     private String name;
     private Date birthday;
 
