@@ -1,5 +1,3 @@
-# Cheat Sheet
-
 # Imperative to Functional Programming
 
 **Imperative Programming:** Telling the computer exactly what to do in which order e.g. with loops, if-statements, etc.
@@ -64,6 +62,10 @@ Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
 // Identical to attendees.sort(byDateOfBirth);
 // Tip: write comparator as param of .sort
 Collections.sort(attendees, byDateOfBirth);
+```
+Call like this:
+```java
+Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
 ```
 ### Example: Comparator as Lambda Expression
 ```java
@@ -137,3 +139,50 @@ public class Guitar {
     private String color;
 }
 ```
+# Additional Competences
+## Java Natural-Order and Reverse
+If the `compareTo` method hasn’t been overridden, it uses the default (natural) ordering defined by the type.  
+**Natural order always sorts ascending**. It behaves like this:
+
+| Datatype                        | Natural Order (Ascending)                    |
+| ------------------------------- | -------------------------------------------- |
+| `String`                        | Word starting with `A` first, with `Z` last  |
+| `Integer`                       | Smallest first, largest last                 |
+| `Boolean`                       | `false` < `true`                             |
+| `LocalDate` / `Date`            | Earliest first, latest last                  |
+| `Double`                        | Lowest first, highest last                   |
+| `Character`                     | `'a'` < `'b'` < `'z'`                        |
+| `Enum`                          | By declaration order in the enum class       |
+| Custom Object with `Comparable` | Based on the implementation of `compareTo()` |
+**Reverse order always sorts descending** and can be achieved with:
+- `Comparator.reverseOrder()` for natural-order types
+- `Collections.reverseOrder(customComparator)` for custom comparators
+- Options in chapter `Natural / Reverse Order`
+## Java Sort Collections
+Java provides built-in methods to sort collections. The actual behavior depends on whether the elements implement `Comparable` (natural order) or if a `Comparator` is provided.  
+Sorting is **stable** and based on **TimSort** (a hybrid of MergeSort and InsertionSort).
+
+### Methods to Sort
+
+| Method                         | Description                                           |
+| ------------------------------ | ----------------------------------------------------- |
+| `Collections.sort(list)`       | Sorts using natural order (`compareTo`)               |
+| `Collections.sort(list, comp)` | Sorts using the given `Comparator`                    |
+| `list.sort(comp)`              | Java 8+ method; equivalent to above, more fluent      |
+| `stream.sorted()`              | Returns a sorted stream (natural order)               |
+| `stream.sorted(comp)`          | Returns a sorted stream using the provided comparator |
+### Requirements:
+
+- For natural order: elements must implement `Comparable<T>`
+- For custom sort: pass a `Comparator<T>` (e.g. via lambdas or `Comparator.comparing()`)
+- Sorting is **in-place** for lists (`Collections.sort` and `list.sort`), but **non-mutating** for streams
+### TimSort
+
+The default algorithm for sorting `List` instances in Java is **TimSort**, introduced in Java 7. It is (this is java solution to sorting arrays and similar data structures):
+- A hybrid **stable sorting algorithm** derived from merge sort and insertion sort
+- Optimized for **partially ordered datasets**, exploiting runs (ordered subsequences)
+
+It is implemented in the package-private class:  
+`java.util.TimSort`
+
+To see how complex it is, checkout [this video](https://youtu.be/NVIjHj-lrT4?si=p7KT29YtuWnutsgX).
