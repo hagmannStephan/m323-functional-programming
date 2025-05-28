@@ -1,25 +1,41 @@
-# Functional Sorting of Structured Data
-## 1. Design Data Model
-According to the requirements, I created this model:
+# Imperative to Functional Programming
 
-<img src="https://github.com/user-attachments/assets/8aae9d75-14d3-4186-b9c8-43f6a414431e" alt="data model" width="400"/>
+**Imperative Programming:** Telling the computer exactly what to do in which order e.g. with loops, if-statements, etc.
 
-## 2. Implement Models
-I created the model's in my Java Project in the [models folder](src/main/java/ch/bbw/models).
-
-## 3. Generate Data
-I decided to generate the test data with the website [generedata.com](https://generatedata.com/). Here is a screenshot of how I generated the mock data:
-
-<img src="https://github.com/user-attachments/assets/ac4208e2-31cc-48df-b4d7-bec9e6395426" alt="screenshot generatedata" width="800"/>
-
-When I run the project, I will parse the JSON and create objects of it with the Class [DataLoader](src\main\java\ch\bbw\util\DataLoader.java).
-
-## 4. Implement Functional Sorting
-
-### Interface `Comparator`
+**Functional (deklarative) Programming:** Treats computation as the evaluation of mathematical functions and avoid changing state or mutable data.
+## Example
+**Imperative Code Example:**
+```java
+public class ImperativeExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        List<Integer> squares = new ArrayList<>();
+        
+        for (Integer number : numbers) {
+            squares.add(number * number);
+        }
+        
+        System.out.println(squares);
+    }
+}
+```
+**Functional Code Example:**
+```java
+public class FunctionalExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        
+        List<Integer> squares = numbers.stream()
+                                       .map(number -> number * number)
+                                       .collect(Collectors.toList());
+        
+        System.out.println(squares);
+    }
+}
+```
+# Interface `Comparator`
 Allow to define custom comparison logic <span style="text-decoration: underline; font-weight: bold">outside the class</span> for which instances we want to sort.
-
-#### Example: Comparator Derived Class
+### Example: Comparator Derived Class
 ```java
 public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
 
@@ -32,12 +48,7 @@ public class AttendeeByMentorDateOfBirth implements Comparator<Attendee> {
     }
 }
 ```
-
-You can call it like this in the code:
-```java
-Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
-```
-#### Example: Comparator as Anonymous Class
+### Example: Comparator as Anonymous Class
 ```java
 Comparator<Attendee> byDateOfBirth = new Comparator<Attendee>() {
     @Override
@@ -56,32 +67,32 @@ Call like this:
 ```java
 Collections.sort(attendees, new ch.bbw.util.AttendeeByMentorDateOfBirth());
 ```
-#### Example: Comparator as Lambda Expression
+### Example: Comparator as Lambda Expression
 ```java
 // Sort by rank
 attendees.sort((a1, a2) -> {
     return a1.getRank().compareTo(a2.getRank());
 });
 ```
-### Class Attribute of Comparator
+## Class Attribute of Comparator
 ```java
 public void sortByName(List<Person> people) {
-    // Person::getName = (Person p) -> p.getName()
-    people.sort(Comparator.comparing(Person::getName));
+	// Person::getName = (Person p) -> p.getName()
+	people.sort(Comparator.comparing(Person::getName));
 }
 ```
-### `Comparator Chaining`
+## `Comparator Chaining`
 Define what should happen if the first comparison returns an equal value:
 ```java
 attendees.sort(
     Comparator
-            .comparing((Attendee a) -> a.getGuitar().getPrice())
+		    .comparing((Attendee a) -> a.getGuitar().getPrice())
             // Only possible if getName is directly a method from Attendee
             // Does the same as .thenComparing((Attendee a) -> a.getName())
             .thenComparing(Attendee::getName)
 );
 ```
-### Class `Comparable`
+# Class `Comparable`
 Used to define the natural order of objects for objects of a class. Has to be implemented in this class.
 ```java
 // Implement the Comparable interface for comparing Attendee
@@ -97,26 +108,25 @@ public class Attendee implements Comparable<Atstendee> {
     }
 }
 ```
-### Natural / Reverse Order
+# Natural / Reverse Order
 **Natural Order**: Ascending (e.g. oldest date first, youngest age first, ...)
 **Reverse Order**: Descending (e.G. names with z first, true first, ...)
-
-#### Option 1: Change Comparison
+## Option 1: Change Comparison
 ```java
     return a1.getRank().compareTo(a2.getRank());
     // becomes (for last rank, first)
     return a2.getRank().compareTo(a1.getRank());
 ```
-#### Option 2: Use `reversed()`
+## Option 2: Use `reversed()`
 Needs to be applied directly to the comparison, can't just be appended to, e.g. a lambda expression.
 ```java
-    // attendees.sort((a1, a2) -> {
-        // return a1.getRank().compareTo(a2.getRank());
-    // });
-    // becomes
-    attendees.sort(Comparator.comparing(Attendee::getRank).reversed());
+	// attendees.sort((a1, a2) -> {
+		// return a1.getRank().compareTo(a2.getRank());
+	// });
+	// becomes
+	attendees.sort(Comparator.comparing(Attendee::getRank).reversed());
 ```
-### Lombok / Record
+# Lombok / Record
 Automatically generates `getter`, `setter`, `toString()` etc.
 ```java
 import lombok.Data;
@@ -129,9 +139,8 @@ public class Guitar {
     private String color;
 }
 ```
-### Additional Competences
-
-##### Java Natural-Order and Reverse
+# Additional Competences
+## Java Natural-Order and Reverse
 If the `compareTo` method hasn’t been overridden, it uses the default (natural) ordering defined by the type.  
 **Natural order always sorts ascending**. It behaves like this:
 
@@ -148,13 +157,12 @@ If the `compareTo` method hasn’t been overridden, it uses the default (natural
 **Reverse order always sorts descending** and can be achieved with:
 - `Comparator.reverseOrder()` for natural-order types
 - `Collections.reverseOrder(customComparator)` for custom comparators
-- Options in chapter **Natural / Reverse Order**
-
-##### Java Sort Collections
+- Options in chapter `Natural / Reverse Order`
+## Java Sort Collections
 Java provides built-in methods to sort collections. The actual behavior depends on whether the elements implement `Comparable` (natural order) or if a `Comparator` is provided.  
 Sorting is **stable** and based on **TimSort** (a hybrid of MergeSort and InsertionSort).
 
-###### Methods to Sort
+### Methods to Sort
 
 | Method                         | Description                                           |
 | ------------------------------ | ----------------------------------------------------- |
@@ -163,14 +171,12 @@ Sorting is **stable** and based on **TimSort** (a hybrid of MergeSort and Insert
 | `list.sort(comp)`              | Java 8+ method; equivalent to above, more fluent      |
 | `stream.sorted()`              | Returns a sorted stream (natural order)               |
 | `stream.sorted(comp)`          | Returns a sorted stream using the provided comparator |
-
-###### Requirements:
+### Requirements:
 
 - For natural order: elements must implement `Comparable<T>`
 - For custom sort: pass a `Comparator<T>` (e.g. via lambdas or `Comparator.comparing()`)
 - Sorting is **in-place** for lists (`Collections.sort` and `list.sort`), but **non-mutating** for streams
-
-###### TimSort
+### TimSort
 
 The default algorithm for sorting `List` instances in Java is **TimSort**, introduced in Java 7. It is (this is java solution to sorting arrays and similar data structures):
 - A hybrid **stable sorting algorithm** derived from merge sort and insertion sort

@@ -107,8 +107,7 @@ public class Main {
         System.out.println("------------------------------------------------------");
         attendees.sort(
             Comparator.comparing((Attendee a) -> a.getGuitar().getPrice())
-                    // Only possible if getName is directly a method from Attendee
-                    .thenComparing(Attendee::getName)
+                .thenComparing((Attendee a) -> a.getName())
         );
         // Print the results
         for (Attendee attendee : attendees) {
